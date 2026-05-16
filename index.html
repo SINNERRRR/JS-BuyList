@@ -1,16 +1,79 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="uk">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy List</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+<div class="app-wrapper">
+    <div class="grid-container">
+
+        <main class="left-panel">
+            <div class="add-item-bar">
+                <input type="text" placeholder="Назва товару">
+                <button class="btn-blue" data-tooltip="Додати новий товар">Додати</button>
+            </div>
+
+            <article class="item-row">
+                <span class="item-name crossed">Помідори</span>
+                <div class="item-controls">
+                    <span class="qty-badge">2</span>
+                </div>
+                <div class="item-actions">
+                    <button class="btn-status" data-tooltip="Статус">Не куплено</button>
+                </div>
+            </article>
+
+            <article class="item-row">
+                <span class="item-name">Печиво</span>
+                <div class="item-controls">
+                    <button class="btn-circle btn-minus" aria-label="Зменшити" data-tooltip="Зменшити кількість">-</button>
+                    <span class="qty-badge">2</span>
+                    <button class="btn-circle btn-plus" aria-label="Збільшити" data-tooltip="Збільшити кількість">+</button>
+                </div>
+                <div class="item-actions">
+                    <button class="btn-status" data-tooltip="Статус">Куплено</button>
+                    <button class="btn-delete" aria-label="Видалити" data-tooltip="Видалити">✖</button>
+                </div>
+            </article>
+
+            <article class="item-row">
+                <input type="text" class="item-input" value="Сир">
+                <div class="item-controls">
+                    <button class="btn-circle btn-minus" aria-label="Зменшити" data-tooltip="Кількість не може бути менше 1" disabled>-</button>
+                    <span class="qty-badge">1</span>
+                    <button class="btn-circle btn-plus" aria-label="Збільшити" data-tooltip="Збільшити кількість">+</button>
+                </div>
+                <div class="item-actions">
+                    <button class="btn-status" data-tooltip="Статус">Куплено</button>
+                    <button class="btn-delete" aria-label="Видалити" data-tooltip="Видалити">✖</button>
+                </div>
+            </article>
+        </main>
+
+        <aside class="right-panel">
+            <section class="stats-block">
+                <h2>Залишилося</h2>
+                <div class="tag-container">
+                    <span class="product-item"><span>Печиво</span> <span class="amount">2</span></span>
+                    <span class="product-item"><span>Сир</span> <span class="amount">1</span></span>
+                </div>
+            </section>
+            <section class="stats-block">
+                <h2>Куплено</h2>
+                <div class="tag-container">
+                    <span class="product-item"><span class="crossed">Помідори</span> <span class="amount crossed">2</span></span>
+                </div>
+            </section>
+        </aside>
+    </div>
+</div>
+
+<div class="author-badge">
+    <span class="badge-title">Buy List</span>
+    <span class="badge-author-name">Created by Hordii</span>
+</div>
 </body>
 </html>
