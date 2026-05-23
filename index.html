@@ -12,60 +12,22 @@
 
         <main class="left-panel">
             <div class="add-item-bar">
-                <input type="text" placeholder="Назва товару">
-                <button class="btn-blue" data-tooltip="Додати новий товар">Додати</button>
+                <input type="text" id="new-item-input" placeholder="Назва товару">
+                <button id="add-btn" class="btn-blue" data-tooltip="Додати новий товар">Додати</button>
             </div>
 
-            <article class="item-row">
-                <span class="item-name crossed">Помідори</span>
-                <div class="item-controls">
-                    <span class="qty-badge">2</span>
-                </div>
-                <div class="item-actions">
-                    <button class="btn-status" data-tooltip="Статус">Не куплено</button>
-                </div>
-            </article>
-
-            <article class="item-row">
-                <span class="item-name">Печиво</span>
-                <div class="item-controls">
-                    <button class="btn-circle btn-minus" aria-label="Зменшити" data-tooltip="Зменшити кількість">-</button>
-                    <span class="qty-badge">2</span>
-                    <button class="btn-circle btn-plus" aria-label="Збільшити" data-tooltip="Збільшити кількість">+</button>
-                </div>
-                <div class="item-actions">
-                    <button class="btn-status" data-tooltip="Статус">Куплено</button>
-                    <button class="btn-delete" aria-label="Видалити" data-tooltip="Видалити">✖</button>
-                </div>
-            </article>
-
-            <article class="item-row">
-                <input type="text" class="item-input" value="Сир">
-                <div class="item-controls">
-                    <button class="btn-circle btn-minus" aria-label="Зменшити" data-tooltip="Кількість не може бути менше 1" disabled>-</button>
-                    <span class="qty-badge">1</span>
-                    <button class="btn-circle btn-plus" aria-label="Збільшити" data-tooltip="Збільшити кількість">+</button>
-                </div>
-                <div class="item-actions">
-                    <button class="btn-status" data-tooltip="Статус">Куплено</button>
-                    <button class="btn-delete" aria-label="Видалити" data-tooltip="Видалити">✖</button>
-                </div>
-            </article>
+            <div id="items-list"></div>
         </main>
 
         <aside class="right-panel">
             <section class="stats-block">
                 <h2>Залишилося</h2>
-                <div class="tag-container">
-                    <span class="product-item"><span>Печиво</span> <span class="amount">2</span></span>
-                    <span class="product-item"><span>Сир</span> <span class="amount">1</span></span>
-                </div>
+                <div class="tag-container" id="left-stats"></div>
             </section>
+
             <section class="stats-block">
                 <h2>Куплено</h2>
-                <div class="tag-container">
-                    <span class="product-item"><span class="crossed">Помідори</span> <span class="amount crossed">2</span></span>
-                </div>
+                <div class="tag-container" id="bought-stats"></div>
             </section>
         </aside>
     </div>
@@ -75,5 +37,7 @@
     <span class="badge-title">Buy List</span>
     <span class="badge-author-name">Created by Hordii</span>
 </div>
+
+<script src="smth.js"></script>
 </body>
 </html>
